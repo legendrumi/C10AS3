@@ -1,0 +1,11 @@
+1) compact():
+
+
+
+2) with():
+
+
+
+3) php artisan db:seed:
+
+

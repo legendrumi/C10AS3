@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('carts', function (Blueprint $table) {
             $table->id();
-            $table->string('session_id');
+            $table->string('name')->nullable();
             $table->timestamps();
         });
     }

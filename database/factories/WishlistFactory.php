@@ -1,0 +1,28 @@
+<?php
+
+namespace Database\Factories;
+
+use App\Models\Product;
+use App\Models\Wishlist;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+/**
+ * @extends Factory<Wishlist>
+ */
+class WishlistFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
+     */
+    public function definition(): array
+    {
+        $product = Product::inRandomOrder()->first();
+
+        return [
+            'name' => fake()->firstName(),
+            'product_id' => $product->id,
+        ];
+    }
+}

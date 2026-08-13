@@ -12,7 +12,7 @@ return new class extends Migration {
     {
         Schema::create('wishlists', function (Blueprint $table) {
             $table->id();
-            $table->string('session_id');
+            $table->string('name')->nullable();
             $table->foreignId('product_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
         });

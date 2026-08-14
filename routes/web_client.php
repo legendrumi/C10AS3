@@ -8,8 +8,6 @@ use App\Http\Controllers\Client\BrandController;
 use App\Http\Controllers\Client\CartController;
 use App\Http\Controllers\Client\WishlistController;
 
-Route::get('locale/{locale}', [HomeController::class, 'locale'])->name('locale')->where('locale', '[a-z]+');
-
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::controller(ProductController::class)

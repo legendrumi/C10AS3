@@ -1,11 +1,16 @@
 1) compact():
+    Bu PHP-niň taýýar funksiýasy. Ol üýtgeýän ululyklary (variables) el bilen massiw (array) etmän, awtomatiki usulda massiw görnüşine geçirmek üçin ulanylýar. Laravel-de köplenç maglumaty Controller-den View (sahypa) ibermek üçin ulanylýar.
 
-
+    Meselem: $name = "Aman"; we $age = 25; bar bolsa, compact('name', 'age') diýilse, ol ['name' => 'Aman', 'age' => 25] diýen ýaly massiw düzedip berýär.
 
 2) with():
+    Bu Laravel-iň köp ýerde ulanylýan funksiýasy/metody:
 
+    Database: Maglumatlary bazadan alanyňda aradaky baglanşyklary (relations) öňünden bileje ýükläp almak üçin ulanylýar (mysal üçin: User::with('posts')->get()). Bu programmanyn tiz işlemegine ýardam edýär.
 
+    Redirect (Sahypa geçmek): Başga sahypa ugradylanda wagtlaýyn habar (flash message) ugratmak üçin hem ulanylýar (mysal üçin: return redirect()->back()->with('success', 'HABAR!');).
 
 3) php artisan db:seed:
+    Bu Laravel-iň komandasy. Ol maglumat bazasyna (Database) synag ýa-da ilkinji gerekli maglumatlary awtomatiki doldurmak üçin ulanylýar.
 
-
+    Nämä gerek: Programma täze bolanda bazada hiç zat bolmaýar. El bilen tekstdan dolduryp oturmazlyk üçin, öňünden ýazylan Seeder kody arkaly ýüzlerçe emeli maglumat yazyp girizmek üçin ulanylyar.

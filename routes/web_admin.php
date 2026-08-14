@@ -6,7 +6,6 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ProductController;
 
 Route::prefix('admin')
-    ->name('admin.')
     ->middleware('guest:admin')
     ->group(function () {
         Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
@@ -29,6 +28,10 @@ Route::prefix('admin')
                 Route::get('', 'index')->name('index');
                 Route::get('create', 'create')->name('create');
                 Route::post('', 'store')->name('store');
+
+                Route::get('{product}/edit', 'edit')->name('edit');
+                Route::put('{product}', 'update')->name('update');
+
                 Route::delete('{product}', 'destroy')->name('destroy');
             });
     });

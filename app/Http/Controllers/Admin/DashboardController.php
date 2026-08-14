@@ -15,6 +15,6 @@ class DashboardController extends Controller
         $categoriesCount = Category::count();
         $brandsCount = Brand::count();
 
-        return view('admin.dashboard', compact('productsCount', 'categoriesCount', 'brandsCount'));
+        return view('admin.dashboard.index', compact('productsCount', 'categoriesCount', 'brandsCount'));
     }
 }
